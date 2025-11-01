@@ -30,14 +30,12 @@ export default function Header() {
               <Image
                 src="/images/idst-new-logo.png"
                 alt="IDST Logo"
-                width={120}
+                width={100}
                 height={35}
-                className="object-contain cursor-pointer"
+                className="object-contain cursor-pointer pl-3"
               />
             </Link>
           </div>
-
-          {/* Desktop: show MENU on left */}
           <div
             className="hidden md:flex items-center cursor-pointer"
             onMouseEnter={() => setIsMenuHovered(true)}
@@ -68,8 +66,6 @@ export default function Header() {
             </h1>
           </div>
         </div>
-
-        {/* CENTER: LOGO (Desktop only) */}
         <div className="hidden md:flex justify-center flex-1">
           <Link href="/" className="flex items-center">
             <Image
@@ -114,8 +110,6 @@ export default function Header() {
               CONNECT
             </h1>
           </Link>
-
-          {/* Mobile MENU on right */}
           <div
             className="flex md:hidden items-center gap-3 cursor-pointer"
             onMouseEnter={() => setIsMenuHovered(true)}
@@ -133,13 +127,13 @@ export default function Header() {
               <Image
                 src="/images/IDST-menu-drawer.png"
                 alt="Menu Icon"
-                width={27}
-                height={27}
+                width={24}
+                height={24}
                 className="object-contain"
               />
             </div>
             <h1
-              className="text-[13px] tracking-widest transition-colors duration-300"
+              className="text-[13px] tracking-widest transition-colors duration-300 pr-3"
               style={{ color: isMenuHovered ? "#9D8694" : "#000000" }}
             >
               MENU

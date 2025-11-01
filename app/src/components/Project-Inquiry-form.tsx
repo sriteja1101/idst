@@ -89,12 +89,12 @@ export default function ProjectInquiryForm() {
     : "/images/connect-image-3.webp";
 
   return (
-    <div className="w-full max-w-[1610px] lg:border-l lg:border-r  ml-0 lg:ml-10 px-4 lg:px-0 h-auto lg:h-[817px] overflow-hidden  lg:border-black">
+    <div className="w-full mx-auto px-14 h-auto lg:h-[817px] overflow-hidden">
       <div
-        className={`${manrope.className} ml-0 lg:ml-12 w-full lg:w-[1510px] border-t border-b border-black transition-colors duration-700`}
+        className={`${manrope.className}  w-full transition-colors duration-700 border-b border-black`}
       >
         <div
-          className={`flex flex-col lg:flex-row justify-between sm:border-r sm:border-l sm:border-black p-2 py-8 lg:py-15 transition-all duration-700 ${bgColor} ${textColor} border-r border-l border-transparent lg:border-transparent md:border-black`}
+          className={`flex flex-col lg:flex-row justify-between p-2 py-8 lg:py-15 transition-all duration-700 ${bgColor} ${textColor} border-r border-l border-transparent lg:border-transparent md:border-black`}
         >
           <div className="flex items-center justify-center w-full lg:w-[631px] lg:h-[587px] order-1 lg:order-1 mb-8 lg:mb-0">
             <Image

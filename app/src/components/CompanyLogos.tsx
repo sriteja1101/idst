@@ -11,7 +11,7 @@ const images = [
 
 export default function CompanyLogos() {
   return (
-    <div className="h-[120px] overflow-hidden w-[720px] flex items-center">
+    <div className="h-[120px]  overflow-hidden w-full flex items-center">
       <motion.div
         className="flex"
         animate={{ x: ["0%", "-65%"] }} 

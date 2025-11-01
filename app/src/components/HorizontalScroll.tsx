@@ -8,7 +8,7 @@ export default function HorizontalScroll() {
   const targetRef = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({ target: targetRef });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-150%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-170%"]);
   const backgroundColor = useTransform(
     scrollYProgress,
     [0.3, 0.6],
@@ -16,7 +16,7 @@ export default function HorizontalScroll() {
   );
 
   return (
-    <section ref={targetRef} className="relative h-[300vh] pb-22">
+    <section ref={targetRef} className="relative h-[300vh]">
       <motion.div
         style={{ backgroundColor }}
         className="sticky top-0 flex h-screen items-center overflow-hidden transition-colors duration-500"

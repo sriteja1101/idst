@@ -14,25 +14,25 @@ export default function Home() {
         <Header />
       </ScrollEffect>
 
-      <ScrollEffect delay={0.1}>
-        <SyncedSlideshow />
-      </ScrollEffect>
+      <div className="border-x border-black mx-10">
+        <ScrollEffect delay={0.1}>
+          <SyncedSlideshow />
+        </ScrollEffect>
 
-      <ScrollEffect delay={0.2}>
-        <Ethos />
-      </ScrollEffect>
+        <ScrollEffect delay={0.2}>
+          <Ethos />
+        </ScrollEffect>
 
-      
         <FeaturedWorks />
-      
 
-      <ScrollEffect delay={0.4}>
-        <Services />
-      </ScrollEffect>
+        <ScrollEffect delay={0.4}>
+          <Services />
+        </ScrollEffect>
 
-      <ScrollEffect delay={0.5}>
-        <LetsCreateTogether />
-      </ScrollEffect>
+        <ScrollEffect delay={0.5}>
+          <LetsCreateTogether />
+        </ScrollEffect>
+      </div>
     </>
   );
 }

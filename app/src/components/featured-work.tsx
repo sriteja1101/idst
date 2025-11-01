@@ -13,7 +13,7 @@ const FeaturedWorks = () => {
   return (
     <>
       <div
-        className={`h-[2300px] w-[1610px] ml-10 border-r border-l border-black ${manrope.className}`}
+        className={`h-full w-full ${manrope.className} border-b border-black` }
       >
         <div className="h-[70px] flex justify-between">
           <div className="h-[38px] w-[382px] pb-[3px] mt-1 ml-[60px] mb-[25px] text-[31px] text-[#1C1A1A] font-serif">

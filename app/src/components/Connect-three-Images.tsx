@@ -9,8 +9,11 @@ const manrope = Manrope({
 
 export default function ConnectThreeImages() {
   return (
-    <div className="relative h-[1047px] w-[1610px] border-r border-l border-black  overflow-hidden ml-10">
-      <div>
+    // Parent container
+    <div className="relative w-full overflow-hidden mb-10">
+      {/* --- DESKTOP LAYOUT (Hidden on mobile) --- */}
+      {/* This is your original code, now wrapped to be hidden on mobile */}
+      <div className="hidden md:block h-screen">
         <div className="absolute top-14 left-10">
           <Image
             src="/images/connect-image-4.webp"
@@ -47,6 +50,53 @@ export default function ConnectThreeImages() {
             className="object-cover"
           />
         </div>
+      </div>
+      <div className="block md:hidden px-4">
+        <div className="flex flex-col space-y-6 py-8">
+          <div className="flex justify-start">
+            <Image
+              src="/images/connect-image-4.webp"
+              alt="Vases and frame"
+              width={200}
+              height={200}
+              className="object-cover"
+            />
+          </div>
+          <div className="flex justify-end pr-6 -mt-25">
+            <Image
+              src="/images/connect-image-7.webp"
+              alt="Vase illustration"
+              width={100} 
+              height={100} 
+              className="object-cover"
+            />
+          </div>
+
+          {/* Image 2 (Book) - Aligned Right */}
+          <div className="flex justify-end">
+            <Image
+              src="/images/connect-image-5.webp"
+              alt="Person with book"
+              width={180} // Set a fixed width for mobile
+              height={184} // Calculated height to maintain aspect ratio
+              className="object-cover"
+            />
+          </div>
+
+          {/* Image 3 (Sunflowers) - Aligned Left */}
+          <div className="flex justify-start">
+            <Image
+              src="/images/connect-image-6.webp"
+              alt="Person with sunflowers"
+              width={180} // Set a fixed width for mobile
+              height={120} // Calculated height to maintain aspect ratio
+              className="object-cover"
+            />
+          </div>
+        </div>
+
+        {/* Bottom horizontal line */}
+        <div className="w-full h-px bg-gray-400 mb-4"></div>
       </div>
     </div>
   );

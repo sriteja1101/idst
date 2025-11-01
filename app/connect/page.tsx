@@ -4,6 +4,7 @@ import LetsConnect from "../src/components/LetsConnect";
 import ConnectThreeImages from "../src/components/Connect-three-Images";
 import LetsCreateTogether from "../src/components/LetsCreateTogether";
 import ScrollEffect from "../src/components/ScrollEffect";
+import Header from "../src/components/header";
 const manrope = Manrope({
   subsets: ["latin"],
   display: "swap",
@@ -11,19 +12,22 @@ const manrope = Manrope({
 
 export default function Connect() {
   return (
-    <>
-      <ScrollEffect>
-        <LetsConnect />
-      </ScrollEffect>
-      <ScrollEffect>
-        <ProjectInquiryForm />
-      </ScrollEffect>
-      <ScrollEffect>
-        <ConnectThreeImages />
-      </ScrollEffect>
-      <ScrollEffect>
-        <LetsCreateTogether />
-      </ScrollEffect>
-    </>
+    <div>
+      <Header />
+      <div className="border-x border-black mx-10">
+        <ScrollEffect>
+          <LetsConnect />
+        </ScrollEffect>
+        <ScrollEffect>
+          <ProjectInquiryForm />
+        </ScrollEffect>
+        <ScrollEffect>
+          <ConnectThreeImages />
+        </ScrollEffect>
+        <ScrollEffect>
+          <LetsCreateTogether />
+        </ScrollEffect>
+      </div>
+    </div>
   );
 }
