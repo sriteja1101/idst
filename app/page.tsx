@@ -32,7 +32,7 @@ export default function Home() {
         <Header />
       </ScrollEffect>
 
-      <div className="border-x border-black mx-10">
+      <div className="border-x border-black mx-5 md:mx-10">
         <ScrollEffect delay={0.1}>
           <SyncedSlideshow />
         </ScrollEffect>

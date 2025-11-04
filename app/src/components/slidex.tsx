@@ -1,13 +1,10 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
-import { Manrope } from "next/font/google";
+// Removed: import Image from "next/image";
+// Removed: import { Manrope } from "next/font/google";
 
-const manrope = Manrope({
-  subsets: ["latin"],
-  display: "swap",
-});
+// Removed: const manrope = Manrope(...)
 
 const slides = [
   { id: "01", imageSrc: "/images/slide1.webp" },
@@ -28,17 +25,17 @@ export default function SyncedSlideshow() {
 
   return (
     <div
-      className={`w-full h-screen ${manrope.className} flex flex-col gap-3`}
+      className={`w-full flex flex-col gap-3`}
+      style={{ fontFamily: "'Manrope', sans-serif" }}
     >
-      <div className="relative w-full h-[80vh] sm:h-[85vh] md:h-[90vh]">
+      <div className="relative w-full h-[45vh] sm:h-[65vh] md:h-[90vh]">
         {slides.map((slide, index) => (
-          <Image
+          <img
             key={slide.id}
             src={slide.imageSrc}
             alt={`Slide ${slide.id}`}
-            fill
-            priority={index === 0}
-            className={`transition-opacity duration-1000 ease-in-out object-cover ${
+            loading={index === 0 ? "eager" : "lazy"}
+            className={`transition-opacity duration-1000 ease-in-out object-cover absolute inset-0 w-full h-full ${
               index === activeIndex ? "opacity-100" : "opacity-0"
             }`}
           />
@@ -65,3 +62,4 @@ export default function SyncedSlideshow() {
     </div>
   );
 }
+

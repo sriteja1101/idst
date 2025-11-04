@@ -34,7 +34,7 @@ export default function Connect() {
   return (
     <div>
       <Header />
-      <div className="border-x border-black mx-10">
+      <div className="border-x border-black lg:mx-10 mx-5">
         <ScrollEffect>
           <LetsConnect />
         </ScrollEffect>

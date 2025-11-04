@@ -19,7 +19,7 @@ export default function Header() {
   return (
     <>
       <Sidebar isOpen={open} onClose={() => setOpen(false)} />
-      <header className={`flex justify-between items-center  lg:h-[78px] border-b border-black py-3.5 px-5 md:py-11.5  md:px-9 lg:py-[9px] box-border ${manrope.className}`}
+      <header className={`flex justify-between items-center  lg:h-[68px] border-b border-black py-3.5 px-2 md:py-11.5  md:px-9 lg:py-[9px] box-border ${manrope.className}`}
       >
         <div className="flex items-center h-10 w-[266px]">
           <div className="block lg:hidden">
@@ -68,8 +68,8 @@ export default function Header() {
             <Image
               src="/images/idst-new-logo.png"
               alt="IDST Logo"
-              width={140}
-              height={40}
+              width={129}
+              height={29}
               className="object-contain cursor-pointer"
             />
           </Link>

@@ -87,42 +87,49 @@ export default function LetsCreateTogether() {
         <div
           className={`${manrope.className} w-full grid grid-cols-2 mx-auto max-w-[95%] pb-10`}
         >
-          <div className="flex  items-center justify-center border-b border-black">
-            <div className="flex justify-center">
-              <div className="flex flex-col">
-                <div className="text-[11px] text-[#1C1A1A] relative group cursor-pointer">
+          <div className="flex items-center justify-center border-b border-black w-full py-12 px-6">
+            
+            <div className="grid grid-cols-3 justify-center gap-x-8 lg:gap-x-18">
+              <div className="flex flex-col text-left gap-y-2">
+                <div className="text-[11px] text-[#1C1A1A] relative group cursor-pointer whitespace-nowrap">
                   Instagram
                   <div className="absolute bottom-0 left-0 w-0 h-px bg-[#1C1A1A] transition-all duration-300 group-hover:w-full"></div>
                 </div>
-                <div className="text-[11px] text-[#1C1A1A] relative group cursor-pointer">
+                <div className="text-[11px] text-[#1C1A1A] relative group cursor-pointer whitespace-nowrap">
                   LinkedIn
                   <div className="absolute bottom-0 left-0 w-0 h-px bg-[#1C1A1A] transition-all duration-300 group-hover:w-full"></div>
                 </div>
               </div>
-              <div className="flex flex-col ml-30">
-                <div className="text-[11px] text-[#1C1A1A] relative group cursor-pointer">
+              <div className="flex flex-col text-left gap-y-2">
+                <div className="text-[11px] text-[#1C1A1A] relative group cursor-pointer whitespace-nowrap">
                   Privacy Policy
                   <div className="absolute bottom-0 left-0 w-0 h-px bg-[#1C1A1A] transition-all duration-300 group-hover:w-full"></div>
                 </div>
-                <div className="text-[11px] text-[#1C1A1A] relative group cursor-pointer">
+                <div className="text-[11px] text-[#1C1A1A] relative group cursor-pointer whitespace-nowrap">
                   Terms & Conditions
                   <div className="absolute bottom-0 left-0 w-0 h-px bg-[#1C1A1A] transition-all duration-300 group-hover:w-full"></div>
                 </div>
               </div>
-              <div className="flex flex-col text-right ml-30">
-                <div className="text-[11px] text-[#1C1A1A]">@2025 IDST</div>
-                <div className="text-[11px] text-[#1C1A1A]">Site Credits</div>
+              <div className="flex flex-col text-left gap-y-2">
+                <div className="text-[11px] text-[#1C1A1A] whitespace-nowrap">
+                  @2025 IDST
+                </div>
+                <div className="text-[11px] text-[#1C1A1A] whitespace-nowrap">
+                  Site Credits
+                </div>
               </div>
             </div>
           </div>
-          <div className="py-18 bg-[#321514] flex items-center justify-center">
+          <div className="py-15 bg-[#321514] flex items-center justify-center">
             <h2 className="text-[34px] text-white cursor-pointer">
               Let’s create together.
             </h2>
           </div>
         </div>
       </div>
-      <div className={`block md:hidden max-w-[95%] mx-auto  border-t border-black ${manrope.className}`}>
+      <div
+        className={`block md:hidden max-w-[95%] mx-auto  border-t border-black ${manrope.className}`}
+      >
         <div className="relative h-[190px] flex items-center justify-center overflow-hidden border-b border-black py-6">
           <AnimatePresence initial={false}>
             <motion.img
@@ -141,8 +148,7 @@ export default function LetsCreateTogether() {
                 zIndex: 2,
                 transition: {
                   duration: current === 0 ? 0.7 : 0.4,
-                  ease:
-                    current === 0 ? [0.42, 0, 0.58, 1] : [0.6, 0, 0.8, 1],
+                  ease: current === 0 ? [0.42, 0, 0.58, 1] : [0.6, 0, 0.8, 1],
                 },
               }}
               exit={{
@@ -193,7 +199,7 @@ export default function LetsCreateTogether() {
           </div>
         </div>
         <div className="py-10 bg-[#321514] flex items-center justify-center">
-          <h2 className="text-[34px] text-white cursor-pointer text-center px-4">
+          <h2 className="text-[24px] md:text-[34px] text-white cursor-pointer text-center px-4">
             Let’s create together.
           </h2>
         </div>

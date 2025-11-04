@@ -12,17 +12,17 @@ const manrope = Manrope({
 export default function Ethos() {
   return (
     <section
-      className={`relative w-full overflow-hidden ${manrope.className} border-b border-black`}
+      className={`relative w-full overflow-hidden ${manrope.className}`}
     >
       <div
         className="
-          relative flex flex-col items-start text-left w-full px-6 pt-16 pb-12
-          lg:items-start lg:text-left lg:justify-end lg:min-h-[800px] lg:pl-10 lg:pb-20 lg:pt-0
+          relative flex flex-col items-start text-left w-full px-6 pt-10 pb-12
+          lg:items-start lg:text-left lg:justify-center lg:min-h-[700px] lg:pl-10  lg:pt-70
         "
       >
         <h2
           className="
-            text-2xl font-light font-serif text-[#1b1b1b] mb-3
+            text-xl font-light font-serif text-[#1b1b1b] mb-3
             lg:text-[32px]
           "
         >
@@ -31,7 +31,7 @@ export default function Ethos() {
 
         <p
           className="
-            text-2xl w-full max-w-2xl text-[#111] leading-tight
+            text-[21px] w-full max-w-2xl text-[#111] leading-6.5
             lg:text-[46px] lg:w-[850px] lg:max-w-none lg:leading-[1.05] lg:tracking-[-0.02em]
           "
         >
@@ -52,27 +52,33 @@ export default function Ethos() {
       </div>
       <div
         className="
-          relative w-full flex flex-row items-start px-4 pb-16
+          relative w-full flex flex-row items-start px-4 
           lg:absolute lg:top-0 lg:right-0 lg:w-auto lg:flex-row lg:items-start lg:pt-0 lg:pr-10 lg:pb-0
         "
       >
         <div
           className="
             w-3/5 h-auto overflow-hidden pr-2
-            lg:w-[340px] lg:h-[340px] lg:-mr-7 lg:pr-0
+            lg:w-[340px] lg:h-[340px] lg:-mr-7 lg:pr-8
           "
         >
-          <Image
-            src="/images/video+cover.webp"
-            alt="Interior design top"
-            width={390}
-            height={390}
-            className="w-full h-full object-contain"
-          />
+          <video
+            src="/images/main.mp4" 
+            width="390"
+            height="390"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-contain" 
+          >
+            Your browser does not support the video tag.
+          </video>
         </div>
+
         <div
           className="
-            w-2/5 h-auto overflow-hidden pl-2
+            w-[130px] h-[165px] overflow-hidden pl-1
             lg:w-[380px] lg:h-[480px] lg:pl-0
           "
         >
@@ -86,15 +92,15 @@ export default function Ethos() {
         </div>
         <div
           className="
-            block absolute bottom-42 -right-5 w-24 h-24 
+            block absolute bottom-10 -right-5 w-24 h-18 
             lg:absolute lg:-bottom-10 lg:right-93 lg:w-[110px] lg:h-[120px]
           "
         >
           <Image
             src="/images/flower.webp"
             alt="Decorative flower"
-            width={110}
-            height={120}
+            width={140}
+            height={140}
             className="w-full h-full object-contain"
           />
         </div>
@@ -102,3 +108,4 @@ export default function Ethos() {
     </section>
   );
 }
+

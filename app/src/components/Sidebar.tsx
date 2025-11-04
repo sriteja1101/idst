@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import Image from "next/image";
 import { Manrope } from "next/font/google";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -28,7 +29,6 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
     };
   }, [isOpen]);
 
-  // close on ESC
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
@@ -42,16 +42,20 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       aria-hidden={!isOpen}
       className={`fixed inset-0 pointer-events-none z-40 ${manrope.className}`}
     >
+      {/* Overlay: Changed to be responsive */}
       <div
         onClick={onClose}
-        className={`pointer-events-${isOpen ? "auto" : "none"} transition-opacity duration-300 ${
+        className={`pointer-events-${
+          isOpen ? "auto" : "none"
+        } transition-opacity duration-300 ${
           isOpen ? "opacity-50" : "opacity-0"
-        } absolute top-0 left-[35%] right-0 bottom-0`}
+        } absolute top-0 right-0 bottom-0 left-0 md:left-[524px]`}
       />
       <aside
         role="dialog"
         aria-modal="true"
-        className={`fixed top-0 left-0 bottom-0 w-[524px] h-[897px] transform transition-transform duration-450 ease-in-out pointer-events-auto
+        // Width and Height are now responsive
+        className={`fixed top-0 left-0 bottom-0 w-[90%] max-w-md md:w-[524px] h-full transform transition-transform duration-450 ease-in-out pointer-events-auto
           ${isOpen ? "translate-x-0" : "-translate-x-full"}
         `}
         style={{ willChange: "transform" }}
@@ -63,14 +67,15 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
               animate={isOpen ? { y: 0, opacity: 1 } : { y: 10, opacity: 0 }}
               transition={{ duration: 1 }}
               onClick={onClose}
-              className="text-[27px] tracking-wide font-serif font-normal opacity-95"
+              className="text-[27px] tracking-wide font-serif font-normal opacity-95 cursor-pointer"
               aria-label="Close sidebar"
             >
               close
             </motion.button>
           </div>
-          <nav className="flex-1 ml-16 mt-6 space-y-6">
-            <ul className="flex flex-col gap-10 mt-6">
+          {/* Reduced margin and gap for mobile */}
+          <nav className="flex-1 ml-8 md:ml-16 mt-6 space-y-6">
+            <ul className="flex flex-col gap-8 md:gap-10 mt-6">
               <motion.li
                 initial={{ y: 10, opacity: 0 }}
                 animate={isOpen ? { y: 0, opacity: 1 } : { y: 10, opacity: 0 }}
@@ -115,25 +120,28 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                 animate={isOpen ? { y: 0, opacity: 1 } : { y: 10, opacity: 0 }}
                 transition={{ duration: 1 }}
               >
-                <button
-                  onClick={onClose}
-                  className="text-[16px] tracking-widest uppercase text-white"
-                >
-                  Connect
-                </button>
+                <Link href="/connect">
+                  <button
+                    onClick={onClose}
+                    className="text-[16px] tracking-widest uppercase text-white cursor-pointer"
+                  >
+                    Connect
+                  </button>
+                </Link>
               </motion.li>
             </ul>
           </nav>
-          <div className="flex justify-end pb-45">
+          {/* Fixed invalid 'pb-45' class */}
+          <div className="flex justify-end pb-20 md:pb-44">
             <motion.div
               initial={{ y: 10, opacity: 0 }}
               animate={isOpen ? { y: 0, opacity: 1 } : { y: 10, opacity: 0 }}
               transition={{ duration: 1 }}
             >
-              <Image 
-                src="/images/sidebar.png" 
+              <Image
+                src="/images/sidebar.png"
                 alt="Sidebar decoration"
-                width={210} 
+                width={210}
                 height={120}
                 className="object-contain"
               />

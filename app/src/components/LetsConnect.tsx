@@ -9,9 +9,9 @@ const manrope = Manrope({
 export default function LetsConnect() {
   return (
     <>
-      <div className="mx-4 md:mx-10">
+      <div className="md:mx-10">
         <div className={`${manrope.className} w-full border-b border-black pb-10`}>
-          <div className="hidden md:flex justify-between text-black">
+          <div className="hidden md:flex justify-between  text-black">
             <div className="flex flex-col justify-center">
               <div className="w-[630px] pt-38">
                 <h3 className="text-[24px] pb-2 font-normal font-serif">
@@ -83,39 +83,39 @@ export default function LetsConnect() {
           <div
             className="flex flex-col md:hidden text-black"
           >
-            <main className="p-6 space-y-8">
-              <div>
+            <main className="p-6 space-y-4">
+              <div className="w-[90%] pt-12">
                 <h3 className="text-[22px] font-normal font-serif">
                   let’s connect
                 </h3>
-                <h1 className="text-[28px] leading-tight mt-2 w-[90%]">
+                <h1 className="text-[22px] leading-tight mt-2 ">
                   Every story starts with a connection.
                 </h1>
-                <p className="text-[15px] text-gray-800 leading-snug mt-5">
+                <p className="text-[14px] text-gray-800 leading-snug mt-3">
                   Share your vision and let’s bring it to life.
                 </p>
-                <p className="text-[12px] uppercase tracking-widest mt-1">
+                <p className="text-[10px] uppercase tracking-widest mt-1">
                   start a project
                 </p>
               </div>
               <div>
-                <p className="text-[15px] text-gray-800 leading-snug">
+                <p className="text-[14px] text-gray-800 leading-snug">
                   Grow with a studio built on creativity and authenticity.
                 </p>
-                <p className="text-[12px] uppercase tracking-widest mt-1">
+                <p className="text-[10px] uppercase tracking-widest mt-1">
                   join our team
                 </p>
               </div>
               <div>
-                <p className="text-[15px] text-gray-800 leading-snug">
+                <p className="text-[14px] text-gray-800 leading-snug">
                   Tune into the playlists that inspire our design process.
                 </p>
-                <p className="text-[12px] uppercase tracking-widest mt-1">
+                <p className="text-[10px] uppercase tracking-widest mt-1">
                   enjoy our sounds
                 </p>
               </div>
-              <div className="w-full">
-                <div className="relative w-full h-[380px]">
+              <div className="w-full ml-25 mt-10">
+                <div className="relative w-[210px] h-60">
                   <Image
                     src="/images/Connect-image-1.webp"
                     alt="Connection"
@@ -124,7 +124,7 @@ export default function LetsConnect() {
                   />
                 </div>
               </div>
-              <footer className="text-[13px] leading-relaxed text-left text-gray-800 space-y-3">
+              <footer className="text-[13px] leading-relaxed text-left text-gray-800 space-y-3 ml-25">
                 <p>
                   Office 07, Floor 5,
                   <br />

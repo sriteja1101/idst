@@ -15,18 +15,18 @@ export default function Services() {
         className={`
           w-full ${manrope.className}
           flex flex-col
-          lg:flex-row lg:px-10 lg:pb-35
+          lg:flex-row lg:px-10 lg:pb-10 
         `}
       >
         <div
           className="
             flex flex-row items-start gap-3 w-full px-4 pt-8
-            lg:w-auto lg:mt-20 lg:px-0 lg:pt-0
+            lg:w-auto lg:mt-20 lg:px-0 lg:pt-0 border-t border-black
           "
         >
           <div
             className="
-              relative w-3/5 h-[50vh]
+              relative w-3/5 h-[40vh]
               lg:w-[452px] lg:h-[661px]
             "
           >
@@ -41,7 +41,7 @@ export default function Services() {
 
           <div
             className="
-              relative w-2/5 h-[35vh]
+              relative w-2/5 h-[25vh]
               lg:w-[280px] lg:h-[353px]
             "
           >
