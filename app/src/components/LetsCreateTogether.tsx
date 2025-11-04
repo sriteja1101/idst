@@ -46,7 +46,7 @@ export default function LetsCreateTogether() {
                     key={current}
                     src={images[current]}
                     alt={`Slide ${current}`}
-                    className="absolute w-[200] h-[200] object-cover"
+                    className="absolute w-[200px] h-[200px] object-cover"
                     initial={{
                       x: current === 0 ? "-100vw" : "100vw",
                       opacity: 0,

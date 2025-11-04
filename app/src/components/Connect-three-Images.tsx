@@ -34,7 +34,7 @@ export default function ConnectThreeImages() {
         </div>
         <div className="absolute top-[100px] right-18">
           <Image
-            src="/images/connect-image-6.webp"
+            src="/images/Connect-image-6.webp"
             alt="Top Right"
             width={207}
             height={311}
@@ -77,25 +77,21 @@ export default function ConnectThreeImages() {
             <Image
               src="/images/connect-image-5.webp"
               alt="Person with book"
-              width={180} // Set a fixed width for mobile
-              height={184} // Calculated height to maintain aspect ratio
+              width={180} 
+              height={184} 
               className="object-cover"
             />
           </div>
-
-          {/* Image 3 (Sunflowers) - Aligned Left */}
           <div className="flex justify-start">
             <Image
-              src="/images/connect-image-6.webp"
+              src="/images/Connect-image-6.webp"
               alt="Person with sunflowers"
-              width={180} // Set a fixed width for mobile
-              height={120} // Calculated height to maintain aspect ratio
+              width={180} 
+              height={120}
               className="object-cover"
             />
           </div>
         </div>
-
-        {/* Bottom horizontal line */}
         <div className="w-full h-px bg-gray-400 mb-4"></div>
       </div>
     </div>

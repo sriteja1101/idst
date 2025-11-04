@@ -19,13 +19,12 @@ export default function Header() {
   return (
     <>
       <Sidebar isOpen={open} onClose={() => setOpen(false)} />
-      <header
-        className={`flex justify-between items-center h-[78px] border-b border-black px-4 md:px-10 py-4 box-border ${manrope.className}`}
+      <header className={`flex justify-between items-center  lg:h-[78px] border-b border-black py-3.5 px-5 md:py-11.5  md:px-9 lg:py-[9px] box-border ${manrope.className}`}
       >
         {/* LEFT SIDE: MENU (Desktop) / LOGO (Mobile) */}
         <div className="flex items-center h-10 w-[266px]">
           {/* Mobile: show logo on left */}
-          <div className="block md:hidden">
+          <div className="block lg:hidden">
             <Link href="/" className="flex items-center">
               <Image
                 src="/images/idst-new-logo.png"
@@ -37,7 +36,7 @@ export default function Header() {
             </Link>
           </div>
           <div
-            className="hidden md:flex items-center cursor-pointer"
+            className="hidden lg:flex items-center cursor-pointer"
             onMouseEnter={() => setIsMenuHovered(true)}
             onMouseLeave={() => setIsMenuHovered(false)}
             onClick={() => setOpen(true)}
@@ -66,7 +65,7 @@ export default function Header() {
             </h1>
           </div>
         </div>
-        <div className="hidden md:flex justify-center flex-1">
+        <div className="hidden lg:flex justify-center flex-1">
           <Link href="/" className="flex items-center">
             <Image
               src="/images/idst-new-logo.png"
@@ -83,7 +82,7 @@ export default function Header() {
           {/* Desktop CONNECT */}
           <Link
             href="/connect"
-            className="hidden md:flex items-center gap-3 cursor-pointer"
+            className="hidden lg:flex items-center gap-3 cursor-pointer"
             onMouseEnter={() => setIsConnectHovered(true)}
             onMouseLeave={() => setIsConnectHovered(false)}
           >
@@ -111,7 +110,7 @@ export default function Header() {
             </h1>
           </Link>
           <div
-            className="flex md:hidden items-center gap-3 cursor-pointer"
+            className="flex lg:hidden items-center gap-3 cursor-pointer"
             onMouseEnter={() => setIsMenuHovered(true)}
             onMouseLeave={() => setIsMenuHovered(false)}
             onClick={() => setOpen(true)}

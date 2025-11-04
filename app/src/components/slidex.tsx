@@ -10,10 +10,10 @@ const manrope = Manrope({
 });
 
 const slides = [
-  { id: "01", imageSrc: "/Images/slide1.webp" },
-  { id: "02", imageSrc: "/Images/slide2.webp" },
-  { id: "03", imageSrc: "/Images/slide3.webp" },
-  { id: "04", imageSrc: "/Images/slide4.webp" },
+  { id: "01", imageSrc: "/images/slide1.webp" },
+  { id: "02", imageSrc: "/images/slide2.webp" },
+  { id: "03", imageSrc: "/images/slide3.webp" },
+  { id: "04", imageSrc: "/images/slide4.webp" },
 ];
 
 export default function SyncedSlideshow() {
