@@ -12,12 +12,56 @@ const manrope = Manrope({
 export default function Ethos() {
   return (
     <section
-      className={`relative w-full h-full overflow-hidden ${manrope.className}`}
+      className={`relative w-full overflow-hidden ${manrope.className} border-b border-black`}
     >
-      {/* Image Collage - positioned at top right */}
-      <div className="absolute top-0 right-0 flex items-start pr-10">
-        {/* Left smaller image */}
-        <div className="w-[340px] h-[340px] overflow-hidden -mr-7">
+      <div
+        className="
+          relative flex flex-col items-start text-left w-full px-6 pt-16 pb-12
+          lg:items-start lg:text-left lg:justify-end lg:min-h-[800px] lg:pl-10 lg:pb-20 lg:pt-0
+        "
+      >
+        <h2
+          className="
+            text-2xl font-light font-serif text-[#1b1b1b] mb-3
+            lg:text-[32px]
+          "
+        >
+          ethos
+        </h2>
+
+        <p
+          className="
+            text-2xl w-full max-w-2xl text-[#111] leading-tight
+            lg:text-[46px] lg:w-[850px] lg:max-w-none lg:leading-[1.05] lg:tracking-[-0.02em]
+          "
+        >
+          Our studio is built on what we believe in, ideas that shape our work &
+          flow into every space we design.
+        </p>
+
+        <a
+          href="#"
+          className="
+            inline-block text-[12px] tracking-[0.18em] uppercase text-[#111] mt-6 pb-0.5 
+            transition-colors duration-300 hover:bg-[#321514] hover:text-white
+            lg:w-[100px]
+          "
+        >
+          Learn more
+        </a>
+      </div>
+      <div
+        className="
+          relative w-full flex flex-row items-start px-4 pb-16
+          lg:absolute lg:top-0 lg:right-0 lg:w-auto lg:flex-row lg:items-start lg:pt-0 lg:pr-10 lg:pb-0
+        "
+      >
+        <div
+          className="
+            w-3/5 h-auto overflow-hidden pr-2
+            lg:w-[340px] lg:h-[340px] lg:-mr-7 lg:pr-0
+          "
+        >
           <Image
             src="/images/video+cover.webp"
             alt="Interior design top"
@@ -26,8 +70,12 @@ export default function Ethos() {
             className="w-full h-full object-contain"
           />
         </div>
-
-        <div className="w-[380px] h-[480px] overflow-hidden">
+        <div
+          className="
+            w-2/5 h-auto overflow-hidden pl-2
+            lg:w-[380px] lg:h-[480px] lg:pl-0
+          "
+        >
           <Image
             src="/images/ethos-image-3.webp"
             alt="Decorative lamp"
@@ -36,38 +84,21 @@ export default function Ethos() {
             className="w-full h-full object-cover"
           />
         </div>
-
-        {/* Decorative flower illustration */}
-        <div className="absolute -bottom-10 right-93">
+        <div
+          className="
+            block absolute bottom-42 -right-5 w-24 h-24 
+            lg:absolute lg:-bottom-10 lg:right-93 lg:w-[110px] lg:h-[120px]
+          "
+        >
           <Image
             src="/images/flower.webp"
             alt="Decorative flower"
             width={110}
             height={120}
-            className="object-contain"
+            className="w-full h-full object-contain"
           />
         </div>
       </div>
-
-      {/* Text content */}
-      <div className="relative flex flex-col justify-end min-h-[800px] pl-10 pb-20">
-        <h2 className="text-[32px] font-light font-serif text-[#1b1b1b] mb-3">
-          ethos
-        </h2>
-
-        <p className="text-[46px] w-[850px] text-[#111] leading-[1.05] tracking-[-0.02em]">
-          Our studio is built on what we believe in, ideas that shape our work &
-          flow into every space we design.
-        </p>
-
-        <a
-          href="#"
-          className="inline-block text-[12px] w-[100px] tracking-[0.18em] uppercase text-[#111] mt-6  pb-0.5 transition-colors duration-300 hover:bg-[#321514] hover:text-white"
-        >
-          Learn more
-        </a>
-      </div>
-      <div className="absolute bottom-0 left-0 w-full h-px bg-black"></div>
     </section>
   );
 }

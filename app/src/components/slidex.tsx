@@ -27,38 +27,39 @@ export default function SyncedSlideshow() {
   }, []);
 
   return (
-    <div className={`w-full h-screen ${manrope.className}`}>
-      <div className="w-full h-screen flex flex-col gap-3">
-        <div className="relative w-full h-[50vh] sm:h-[85vh] md:h-[90vh]">
+    <div
+      className={`w-full h-screen ${manrope.className} flex flex-col gap-3`}
+    >
+      <div className="relative w-full h-[80vh] sm:h-[85vh] md:h-[90vh]">
+        {slides.map((slide, index) => (
+          <Image
+            key={slide.id}
+            src={slide.imageSrc}
+            alt={`Slide ${slide.id}`}
+            fill
+            priority={index === 0}
+            className={`transition-opacity duration-1000 ease-in-out object-cover ${
+              index === activeIndex ? "opacity-100" : "opacity-0"
+            }`}
+          />
+        ))}
+      </div>
+
+      <div className="text-sm text-gray-800 flex justify-end">
+        <div className="hidden sm:block p-2 sm:mr-2">
           {slides.map((slide, index) => (
-            <Image
+            <span
               key={slide.id}
-              src={slide.imageSrc}
-              alt={`Slide ${slide.id}`}
-              fill
-              priority={index === 0}
-              className={`transition-opacity duration-1000 ease-in-out object-cover ${
-                index === activeIndex ? "opacity-100" : "opacity-0"
+              onClick={() => setActiveIndex(index)}
+              className={`mr-6 cursor-pointer transition-all duration-300 ${
+                index === activeIndex
+                  ? "border-b-2 border-gray-800"
+                  : "border-b-2 border-transparent"
               }`}
-            />
+            >
+              {slide.id}
+            </span>
           ))}
-        </div>
-        <div className="text-sm text-gray-800 flex justify-end">
-          <div className="p-2 mr-2 hidden sm:block">
-            {slides.map((slide, index) => (
-              <span
-                key={slide.id}
-                onClick={() => setActiveIndex(index)}
-                className={`mr-6 cursor-pointer transition-all duration-300 ${
-                  index === activeIndex
-                    ? "border-b-2 border-gray-800"
-                    : "border-b-2 border-transparent"
-                }`}
-              >
-                {slide.id}
-              </span>
-            ))}
-          </div>
         </div>
       </div>
     </div>

@@ -33,7 +33,6 @@ export default function LetsCreateTogether() {
   }, []);
   return (
     <>
-      {/* --- 1. DESKTOP VERSION (Your original code, hidden on mobile) --- */}
       <div className="hidden md:block">
         <div
           className={`grid grid-cols-2 items-center justify-center w-full gap-10 border-y border-black mx-auto max-w-[95%] ${manrope.className}`}
@@ -123,11 +122,7 @@ export default function LetsCreateTogether() {
           </div>
         </div>
       </div>
-
-      {/* --- 2. MOBILE VERSION (Visible on mobile, hidden on desktop) --- */}
       <div className={`block md:hidden max-w-[95%] mx-auto  border-t border-black ${manrope.className}`}>
-        
-        {/* Div 1: Image Slider */}
         <div className="relative h-[190px] flex items-center justify-center overflow-hidden border-b border-black py-6">
           <AnimatePresence initial={false}>
             <motion.img
@@ -161,22 +156,15 @@ export default function LetsCreateTogether() {
             />
           </AnimatePresence>
         </div>
-
-        {/* Div 2: "featured in:" */}
         <div className="flex justify-center items-center py-6 border-b border-black">
           <h1 className="text-[26px] text-[#1C1A1A] font-serif">
             featured in:
           </h1>
         </div>
-
-        {/* Div 3: Logos */}
         <div className="flex justify-center items-center py-6 border-b border-black">
           <CompanyLogos />
         </div>
-
-        {/* Div 4: Footer Links */}
         <div className="flex items-center justify-center py-6 border-b border-black">
-          {/* I've used sm:flex-row to make the links stack nicely on very small screens */}
           <div className="flex flex-col sm:flex-row text-center sm:text-left gap-6 sm:gap-10">
             <div className="flex flex-col">
               <div className="text-[11px] text-[#1C1A1A] relative group cursor-pointer">
@@ -204,8 +192,6 @@ export default function LetsCreateTogether() {
             </div>
           </div>
         </div>
-
-        {/* Div 5: "Let's create together" */}
         <div className="py-10 bg-[#321514] flex items-center justify-center">
           <h2 className="text-[34px] text-white cursor-pointer text-center px-4">
             Let’s create together.

@@ -21,9 +21,7 @@ export default function Header() {
       <Sidebar isOpen={open} onClose={() => setOpen(false)} />
       <header className={`flex justify-between items-center  lg:h-[78px] border-b border-black py-3.5 px-5 md:py-11.5  md:px-9 lg:py-[9px] box-border ${manrope.className}`}
       >
-        {/* LEFT SIDE: MENU (Desktop) / LOGO (Mobile) */}
         <div className="flex items-center h-10 w-[266px]">
-          {/* Mobile: show logo on left */}
           <div className="block lg:hidden">
             <Link href="/" className="flex items-center">
               <Image
@@ -76,10 +74,7 @@ export default function Header() {
             />
           </Link>
         </div>
-
-        {/* RIGHT SIDE: CONNECT (Desktop) / MENU (Mobile) */}
         <div className="w-[266px] flex justify-end">
-          {/* Desktop CONNECT */}
           <Link
             href="/connect"
             className="hidden lg:flex items-center gap-3 cursor-pointer"

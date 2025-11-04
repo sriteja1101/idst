@@ -12,7 +12,7 @@ export default function HorizontalScroll() {
   const backgroundColor = useTransform(
     scrollYProgress,
     [0.3, 0.6],
-    ["", "#b38b6d"] // darker brown
+    ["", "#b38b6d"] 
   );
 
   return (

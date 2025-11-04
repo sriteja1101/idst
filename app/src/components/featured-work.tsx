@@ -2,30 +2,48 @@
 
 import HorizontalScroll from "./HorizontalScroll";
 import { Manrope } from "next/font/google";
+import Link from "next/link"; 
 
 const manrope = Manrope({
   subsets: ["latin"],
   display: "swap",
-  weight: ["400", "500", "600", "700"], // add weights you use
+  weight: ["400", "500", "600", "700"],
 });
 
 const FeaturedWorks = () => {
   return (
     <>
       <div
-        className={`h-full w-full ${manrope.className} border-b border-black` }
+        className={`w-full ${manrope.className} border-b border-black`}
       >
-        <div className="h-[70px] flex justify-between">
-          <div className="h-[38px] w-[382px] pb-[3px] mt-1 ml-[60px] mb-[25px] text-[31px] text-[#1C1A1A] font-serif">
-            <h1>featured work</h1>
-          </div>
-            <div className="h-5 w-[109px] mr-[72px] mb-[100px] mt-3 flex justify-center items-center text-[13px] tracking-[0.325px] leading-[19.5px] text-[#1C1A1A] hover:bg-[#968992] hover:text-white">
-              <h1>VIEW GALLERY</h1>
-            </div>
-          </div>
+        <div
+          className="
+            flex justify-between items-baseline
+            px-6 py-8
+            lg:h-[70px] lg:items-center lg:py-0
+          "
+        >
+          <h1
+            className="
+              text-3xl font-serif text-[#1C1A1A]
+              lg:text-[31px] lg:ml-[60px]
+            "
+          >
+            featured work
+          </h1>
+          <Link
+            href="/gallery"
+            className="
+              p-2 uppercase text-[13px] tracking-[0.325px] leading-[19.5px] text-[#1C1A1A]
+              transition-colors duration-300 hover:bg-[#968992] hover:text-white
+              lg:mr-[72px]
+            "
+          >
+            VIEW GALLERY
+          </Link>
+        </div>
         <HorizontalScroll />
       </div>
-      
     </>
   );
 };

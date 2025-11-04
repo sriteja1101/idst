@@ -1,6 +1,5 @@
 import { Manrope } from "next/font/google";
 import Image from "next/image";
-import Header from "./header"; // Note: Header is imported but not used in this component
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -12,8 +11,6 @@ export default function LetsConnect() {
     <>
       <div className="mx-4 md:mx-10">
         <div className={`${manrope.className} w-full border-b border-black pb-10`}>
-          
-          {/* --- DESKTOP VIEW (Unchanged) --- */}
           <div className="hidden md:flex justify-between text-black">
             <div className="flex flex-col justify-center">
               <div className="w-[630px] pt-38">

@@ -9,10 +9,7 @@ const manrope = Manrope({
 
 export default function ConnectThreeImages() {
   return (
-    // Parent container
     <div className="relative w-full overflow-hidden mb-10">
-      {/* --- DESKTOP LAYOUT (Hidden on mobile) --- */}
-      {/* This is your original code, now wrapped to be hidden on mobile */}
       <div className="hidden md:block h-screen">
         <div className="absolute top-14 left-10">
           <Image
@@ -71,8 +68,6 @@ export default function ConnectThreeImages() {
               className="object-cover"
             />
           </div>
-
-          {/* Image 2 (Book) - Aligned Right */}
           <div className="flex justify-end">
             <Image
               src="/images/connect-image-5.webp"
