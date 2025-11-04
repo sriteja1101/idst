@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { Manrope } from "next/font/google";
-import Link from "next/link"; 
+import Link from "next/link";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -15,18 +15,22 @@ export default function Services() {
         className={`
           w-full ${manrope.className}
           flex flex-col
-          lg:flex-row lg:px-10 lg:pb-10 
+          md:flex-row md:flex-wrap md:justify-center
+          lg:flex-row lg:px-10 lg:pb-10
         `}
       >
+        {/* Images Section */}
         <div
           className="
-            flex flex-row items-start gap-3 w-full px-4 pt-8
+            flex flex-row items-start justify-center gap-3 w-full px-4 pt-8
+            md:w-auto md:px-6 md:pt-10
             lg:w-auto lg:mt-20 lg:px-0 lg:pt-0 border-t border-black
           "
         >
           <div
             className="
-              relative w-3/5 h-[40vh]
+              relative w-[60%] h-[40vh]
+              md:w-[320px] md:h-[420px]
               lg:w-[452px] lg:h-[661px]
             "
           >
@@ -41,7 +45,8 @@ export default function Services() {
 
           <div
             className="
-              relative w-2/5 h-[25vh]
+              relative w-[40%] h-[25vh]
+              md:w-[200px] md:h-[260px]
               lg:w-[280px] lg:h-[353px]
             "
           >
@@ -55,33 +60,32 @@ export default function Services() {
           </div>
         </div>
 
+        {/* Text Section */}
         <div
           className="
             flex flex-col items-start text-left w-full px-6 py-12
+            md:px-10 md:py-8 md:w-[80%] md:mx-auto
             lg:items-start lg:text-left lg:px-15 lg:mt-50 lg:py-0
           "
         >
-          <div className="w-full">
-            <h2
-              className="
-                text-2xl font-extralight tracking-[0.02em] text-[#1C1A1A] mb-4 font-serif
-                lg:text-[26px]
-              "
-            >
-              services
-            </h2>
-          </div>
+          <h2
+            className="
+              text-2xl font-extralight tracking-[0.02em] text-[#1C1A1A] mb-4 font-serif
+              lg:text-[26px]
+            "
+          >
+            services
+          </h2>
 
-          <div className="w-full">
-            <p
-              className="
-                text-3xl text-[#1C1A1A] leading-tight tracking-[-0.02em]
-                lg:text-[47px] lg:w-[477px] lg:leading-[1.05]
-              "
-            >
-              A curated design journey - from vision to reality.
-            </p>
-          </div>
+          <p
+            className="
+              text-3xl text-[#1C1A1A] leading-tight tracking-[-0.02em]
+              md:text-[32px] md:leading-[1.1]
+              lg:text-[47px] lg:w-[477px] lg:leading-[1.05]
+            "
+          >
+            A curated design journey - from vision to reality.
+          </p>
 
           <Link
             href="#"

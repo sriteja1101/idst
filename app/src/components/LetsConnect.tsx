@@ -52,7 +52,7 @@ export default function LetsConnect() {
               </div>
             </div>
 
-            <div className="flex flex-col pt-7">
+            <div className="flex flex-col pt-7 md:mt-35">
               <Image
                 src="/images/Connect-image-1.webp"
                 alt="Connection"

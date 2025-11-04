@@ -10,7 +10,7 @@ const manrope = Manrope({
 export default function ConnectThreeImages() {
   return (
     <div className="relative w-full  overflow-hidden mb-10">
-      <div className="hidden md:block h-[900px]">
+      <div className="hidden md:block h-[900px] md:h-[1100px]">
         <div className="absolute top-14 left-10">
           <Image
             src="/images/connect-image-4.webp"
@@ -20,7 +20,7 @@ export default function ConnectThreeImages() {
             className="object-cover"
           />
         </div>
-        <div className="absolute top-[430px] left-[680px] w-[376px] h-[442px]">
+        <div className="absolute top-[430px] left-[680px] md:left-[480px] md:top-[620px] w-[376px] h-[442px]">
           <video
             src="/images/connect.mp4"
             width="482"

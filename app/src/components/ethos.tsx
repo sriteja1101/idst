@@ -17,7 +17,7 @@ export default function Ethos() {
       <div
         className="
           relative flex flex-col items-start text-left w-full px-6 pt-10 pb-12
-          lg:items-start lg:text-left lg:justify-center lg:min-h-[700px] lg:pl-10  lg:pt-70
+          lg:items-start lg:text-left lg:justify-center lg:min-h-[700px] lg:pl-10 md:mt-40 md:h-[900px] lg:pt-70
         "
       >
         <h2
